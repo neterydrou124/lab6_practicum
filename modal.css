@@ -1,0 +1,96 @@
+/* Basic reset */
+body, h2, form {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Overlay styles */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 10;
+  }
+  
+  /* Modal styles */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    z-index: 20;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-header {
+    position: relative;
+    background: linear-gradient(to right, #ff8a00, #e52e71);
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+  }
+  
+  .modal-header h2 {
+    text-align: center;
+  }
+  
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .modal-form input:focus {
+    outline: none;
+    border-color: #4d90fe;
+  }
+  
+  .modal-form button {
+    padding: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal-form button:hover {
+    background-color: #ff5e5e;
+  }
+  
+  .modal-form button:active {
+    background-color: #ff5151;
+    transform: translateY(1px);
+  }
+  
+  /* Centering the modal content vertically for demonstration */
+  html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  /* Add some content to enable scrolling */
+  body::after {
+    content: '...'; /* Replace this with actual content */
+    white-space: pre-wrap;
+    font-size: 20px;
+    line-height: 1.6;
+    display: block;
+    height: 3000px; /* For scroll */
+    width: 100%;
+  }
+  

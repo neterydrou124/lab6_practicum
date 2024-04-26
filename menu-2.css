@@ -1,0 +1,91 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Add your chosen background image URL here */
+  body {
+    background: url('./bbca94ca1a421ba4f32e5a7fd8093a99.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .menu-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+  }
+  
+  .menu-item {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: rgba(0, 255, 0, 0.3); /* Semi-transparent green */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    transition: color 0.3s;
+  }
+  
+  .menu-item:hover {
+    color: #ff0; /* Change color on hover */
+  }
+  
+  .menu-item:before {
+    content: attr(data-icon);
+    position: absolute;
+  }
+  
+  /* Top left item */
+  .menu-item:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  
+  /* Top right item */
+  .menu-item:nth-child(2) {
+    top: 0;
+    right: 0;
+  }
+  
+  /* Bottom left item */
+  .menu-item:nth-child(3) {
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* Bottom right item */
+  .menu-item:nth-child(4) {
+    bottom: 0;
+    right: 0;
+  }
+  
+  /* White lines using pseudo-elements */
+  .menu-container::before,
+  .menu-container::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+  }
+  
+  /* Vertical line */
+  .menu-container::before {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 1px;
+  }
+  
+  /* Horizontal line */
+  .menu-container::after {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    height: 1px;
+  }
+  

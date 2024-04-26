@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    perspective: 1000px;
+    overflow-x: hidden;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .image-container {
+    transition: transform 0.5s;
+    transform: rotateY(-30deg);
+    position: relative;
+    margin: 0 5px;
+  }
+  
+  .image-container:hover {
+    transform: rotateY(0deg) translateX(0);
+    z-index: 10;
+  }
+  
+  .image-container img {
+    max-width: 100px;
+    display: block;
+    backface-visibility: hidden;
+  }
+  
+  .image-container:hover ~ .image-container {
+    transform: translateX(100px);
+  }
+  
